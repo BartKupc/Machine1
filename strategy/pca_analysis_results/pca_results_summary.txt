@@ -1,0 +1,64 @@
+PCA ANALYSIS RESULTS SUMMARY
+=============================
+
+Components and Top Features:
+
+Component 1 (42.11% of variance):
+  - cci: 0.9109
+  - roc_20: 0.9099
+  - stoch_d: 0.8297
+  - tenkan_kijun_diff: 0.7981
+  - historical_volatility_30: 0.7734
+  - roc_3: 0.5659
+  - adx: 0.5364
+  - volume_ratio_50: 0.5287
+  - stoch_rsi_d: 0.5187
+  - macd_diff: 0.5028
+
+Component 2 (26.32% of variance):
+  - obv_ratio: 1.0481
+  - mfi: 0.9141
+  - cmf: 0.8525
+  - roc_10: 0.7237
+  - williams_r: 0.6801
+  - stoch_rsi_d: 0.6498
+  - roc_20: 0.6300
+  - atr_ratio: 0.6281
+  - cci: 0.6180
+  - stoch_rsi_k: 0.5498
+
+Component 3 (15.79% of variance):
+  - volume_ratio_20: 1.0272
+  - supertrend: 0.8103
+  - adx: 0.7851
+  - ema9_ratio: 0.7743
+  - cci: 0.7101
+  - obv_ratio: 0.6918
+  - roc_10: 0.5345
+  - stoch_diff: 0.5027
+  - mfi: 0.4380
+  + roc_20: 0.4074
+
+Component 4 (10.53% of variance):
+  - stoch_diff: 0.9694
+  - obv_ratio: 0.8908
+  - bb_width: 0.8298
+  - bb_pct: 0.7715
+  - roc_3: 0.7104
+  - roc_20: 0.6870
+  - supertrend: 0.6696
+  - mfi: 0.6314
+  - stoch_rsi_k: 0.6273
+  - williams_r: 0.6261
+
+Component 5 (5.26% of variance):
+  - volume_ratio_50: 0.7528
+  + stoch_rsi_d: 0.7080
+  - macd_diff: 0.5630
+  - historical_volatility_30: 0.5468
+  - bb_pct: 0.4821
+  - supertrend: 0.4586
+  + williams_r: 0.4255
+  - cmf: 0.4097
+  - atr_ratio: 0.3527
+  + mfi: 0.3449

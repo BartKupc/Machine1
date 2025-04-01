@@ -74,7 +74,19 @@ def calculate_all_features(data):
     features_df['stoch_d'] = stoch.stoch_signal()
     features_df['stoch_diff'] = features_df['stoch_k'] - features_df['stoch_d']
     
-    # Rate of Change
+    # Commodity Channel Index (CCI)
+    features_df['cci'] = ta.trend.cci(features_df['high'], features_df['low'], features_df['close'], window=20)
+    
+    # Williams %R
+    features_df['williams_r'] = ta.momentum.williams_r(features_df['high'], features_df['low'], features_df['close'], lbp=14)
+    
+    # Stochastic RSI
+    stoch_rsi = ta.momentum.StochRSIIndicator(features_df['close'], window=14, smooth1=3, smooth2=3)
+    features_df['stoch_rsi_k'] = stoch_rsi.stochrsi_k()
+    features_df['stoch_rsi_d'] = stoch_rsi.stochrsi_d()
+    
+    # Rate of Change - extended with short-term windows
+    features_df['roc_3'] = ta.momentum.roc(features_df['close'], window=3)
     features_df['roc_5'] = ta.momentum.roc(features_df['close'], window=5)
     features_df['roc_10'] = ta.momentum.roc(features_df['close'], window=10)
     features_df['roc_20'] = ta.momentum.roc(features_df['close'], window=20)
@@ -144,6 +156,9 @@ def calculate_all_features(data):
     # === Volume-based indicators ===
     # Money Flow Index (MFI)
     features_df['mfi'] = ta.volume.money_flow_index(features_df['high'], features_df['low'], features_df['close'], features_df['volume'], window=14)
+    
+    # Chaikin Money Flow
+    features_df['cmf'] = ta.volume.chaikin_money_flow(features_df['high'], features_df['low'], features_df['close'], features_df['volume'], window=20)
     
     # Fill NaN values with 0 for indicators that require lookback periods
     features_df = features_df.fillna(0)
